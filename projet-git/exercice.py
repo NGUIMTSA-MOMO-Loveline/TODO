@@ -87,7 +87,7 @@ while choix != 0:
       if list_statut[modif]=="a faire":
           list_statut[modif]="fait"
       elif list_statut[modif]=="fait":
-          list_statut[modif]="a faire"
+          list_statut[modif]="a fair"
       
       x=0
       i = 0
@@ -101,3 +101,11 @@ while choix != 0:
       print("4.modifier le statut d un todo")
       print("0. Quitter")
       choix = int(input())
+
+      def delet_todo():
+        confirmation = input(f"voulez vous supprimer le todo '{List_todos[i]['title']}' ? (y/n):")
+        if confirmation.lower() == 'y':
+            del List_todos[i]
+            print("Todo suupprimer")
+        else :
+            print("suppression annuler")    
